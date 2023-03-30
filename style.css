@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+
+/* RESETLEME KODLARI */
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border:0;
+
+}
+
+a,
+a:link,
+a:visited{
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section,
+span,
+p{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body::after {
+  content: "";
+  background: url(coffee.jpg);
+  opacity: 0.65;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/* HEADER START */
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.header{
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.header-navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-logo{
+  font-size: 16px;
+  letter-spacing: 3px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+ul{
+  display: flex;
+}
+
+li{
+  margin-left: 30px;
+}
+
+a{
+  color:#000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.header-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: 6.5rem;
+  line-height: 0.4;
+  font-weight: 200;
+  font-family: 'Herr Von Muellerhoff', cursive;
+  color: #623909;
+  margin-bottom: 80px;
+}
+
+.btn-buy{
+  display: block;
+  background-color: #623909;
+  color:#fff;
+  padding: 10px 15px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-buy::after{
+  content: "Satın Al";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #a45c09;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+.btn-buy:hover::after{
+  top: 0;
+}
+
+/* ABOUT START */
+
+.about{
+  margin: 50px 0;
+}
+
+.about-title{
+  width: 100%;
+  font-size: 25px;
+  font-weight: 400;
+  color: #623909;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 70px;
+  margin-bottom: 122px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.about-img{
+  width: 40%;
+}
+
+.about-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text{
+  width: 40%;
+}
+
+h4{
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 60px;
+  line-height: 0.4;
+  font-weight: 200;
+  font-family: 'Herr Von Muellerhoff', cursive;
+  color: #623909;
+}
+
+#icon{
+  color: #623909;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  color:#623909;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.portfolio-items{
+  width: 25%;
+  height:300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-items img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: #472702;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.portfolio-items:hover .overlay{
+  top: 0;
+}
+
+.portfolio-items:hover img{
+  transform: scale(1.2);
+}
+
+/* CONTACT */
+
+.contact-content{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  column-gap: 10px;
+}
+
+.content-item{
+  display: flex;
+  align-items: center;
+  flex-basis: 33%;
+  flex-direction: column;
+}
+
+.content-item i{
+  font-size: 30px;
+  margin-bottom: 25px;
+  color:#472702
+}
+
+.content-item p{
+  font-size: 15px;
+}
+
+/* FOOTER */
+
+.footer{
+  background-color: #000;
+}
+
+.footer-title h2{
+  width: 100%;
+  font-size: 35px;
+  font-weight: 600;
+  color: #623909;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px;
+}
+
+.footer-copyright{
+  color: #fff;
+  flex-basis: 55%;
+  text-align: center;
+  line-height: 2;
+  font-size: 12px;
+  margin-bottom: 50px;
+}
+
+.footer-copyright p{
+  color: #fff;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-social i{
+  color: #fff;
+  font-size: 30px;
+  padding: 0 40px;
+  margin-bottom: 60px;
+}
+
+
+/* RESPONSIVE */ 
+
+
+#menu-icon{
+  font-size: 35px;
+  display: none;
+}
+
+@media only screen and (max-width:700px){
+  .header-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:absolute;
+    top:100px;
+    left:0px;
+    background-color:#2e1901e6;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height .5s;
+  }
+  .header-menu ul li{
+    margin-right: 50px;
+    margin-top: 6px;
+    margin-bottom: 6px;;
+  }
+  .header-menu a{
+    color: #e7e0e0;
+  }
+  .header-menu #menu-icon{
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width:950px){
+  .about-img{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .about-text{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:900px){
+  .portfolio .portfolio-items{
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .portfolio .portfolio-items{
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width:700px){
+  .contact-content{
+    flex-direction: column;
+  }
+}
