@@ -1,2 +1,2 @@
 # responsive-cafe-site
-Responsive cafe site with lazy loading and scroll animations
+Responsive cafe site with scroll animations
